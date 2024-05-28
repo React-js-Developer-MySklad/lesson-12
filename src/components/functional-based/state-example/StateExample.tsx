@@ -3,8 +3,11 @@ import {useState} from "react";
 export const StateExample = () => {
 
     const [counter, setCounter] = useState(0)
+    const [user, setUser] = useState({id: 0, name: 'Bob'})
 
-    const increment = () => setCounter(counter => counter + 1);
+    const increment = () => setCounter(counter => {
+        return counter + 1
+    });
 
     return (
         <div>

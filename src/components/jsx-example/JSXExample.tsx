@@ -1,17 +1,26 @@
-import React, {PropsWithChildren} from "react";
+import React, {PropsWithChildren, ReactNode, useState} from "react";
 
-export const JSXExample: React.FC<PropsWithChildren> = ({children}) => {
+type iProps = {
+    children: ReactNode
+}
+
+export const JSXExample: React.FC<iProps> = ({children}) => {
 
     const items = [{id: 1, name: 'bob'}]
-    const boolValue = false;
+    const [boolValue, setBoolValue] = useState(true)
+
     return (
         <>
             {boolValue && <div>condition rendering</div>}
+            <button onClick={() => setBoolValue(!boolValue)}>Toggle</button>
+            <ul>
             {
                 items.map(item => {
-                    return item.name;
-                })
+                    return (
+                        <li key={item.id}>item.name</li>
+                )})
             }
+            </ul>
 
             <div>{children}</div>
         </>

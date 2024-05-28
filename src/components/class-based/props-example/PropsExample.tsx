@@ -1,7 +1,12 @@
-import {Component} from "react";
+import {Component, PureComponent} from "react";
 
-export class PropsExample extends Component<{counter: number}> {
-    constructor(props: {counter: number}) {
+type iProps = {
+    counter: number
+}
+
+export class PropsExample extends PureComponent<iProps> {
+
+    constructor(props: iProps) {
         super(props);
     }
 

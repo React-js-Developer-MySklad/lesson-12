@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import {Child} from "./child/Child";
 
-export const liftingStateUpExample = () => {
-    const [name, setName] = useState('')
+export const LiftingStateUpExample = () => {
+    const [name, setName] = useState<string | undefined>('')
     return (
         <div>
             <div>Name: {name}</div>

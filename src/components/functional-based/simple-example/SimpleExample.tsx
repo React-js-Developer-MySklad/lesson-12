@@ -1,1 +1,1 @@
-export const SimpleExample = () => <button>Counter</button>
+export default () => <button>Counter</button>
