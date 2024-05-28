@@ -1,14 +1,13 @@
 import './style.css'
 import {createRoot} from "react-dom/client";
-import Button from './components/button/button';
-import logoPng from './assets/react_logo.png';
+import {App} from "./components/app/app";
+import {StrictMode} from "react";
 
 const rootElement = document.getElementById('root');
-
 const root = createRoot(rootElement)
+
 root.render(
-    <div className='layout'>
-        <Button/>
-        <img src={logoPng} style={{width: 200, height: 200}} alt='Logo'/>
-    </div>
-)
+    <StrictMode>
+        <App/>
+    </StrictMode>
+);

@@ -1,0 +1,1 @@
+export const SimpleExample = () => <button>Counter</button>
